@@ -13,3 +13,5 @@ scoop bucket add kopia https://github.com/kopia/scoop-bucket.git
 scoop install kopia
 
 criar o repositório local: kopia repository create filesystem --path=/caminho/do/repositorio
+
+definir o caminho da pasta no config.yaml
