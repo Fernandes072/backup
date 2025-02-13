@@ -1,17 +1,23 @@
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-python -m venv .venv
-.venv/Scripts/Activate
+- criar o repositório local
+    kopia repository create filesystem --path=/caminho/do/repositorio
 
-instalar o kopia backup UI: https://github.com/kopia/kopia/releases/latest -> "ctrl+f" -> KopiaUI-Setup
-link direto para a versão 0.19.0: https://github.com/kopia/kopia/releases/download/v0.19.0/KopiaUI-Setup-0.19.0.exe
+- definir o caminho da pasta para fazer o backup local no config.yaml
 
-executar comandos pelo powershell
-instalar o kopia backup CLI
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-scoop bucket add kopia https://github.com/kopia/scoop-bucket.git
-scoop install kopia
+- definir o caminho da pasta do repositório no config.yaml
 
-criar o repositório local: kopia repository create filesystem --path=/caminho/do/repositorio
-
-definir o caminho da pasta no config.yaml
+- conectar o rclone com o google drive (executar comandos pelo terminal)
+    rclone config
+    n
+    gdrive
+    drive
+    enter
+    enter
+    enter
+    enter
+    n
+    y
+    faça login na conta do google
+    n
+    y
+    q
+    crie uma pasta chamada Backup no google drive
